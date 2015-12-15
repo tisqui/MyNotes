@@ -47,7 +47,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         createNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BaseActivity.this, NoteDetailActivity.class);
+                Intent intent = new Intent(getApplicationContext(), NoteDetailActivity.class);
                 intent.putExtra(Constants.NOTE_OR_REMINDER, mToolbarTitle);
                 startActivity(intent);
             }
@@ -56,7 +56,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         createListNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BaseActivity.this, NoteDetailActivity.class);
+                Intent intent = new Intent(getApplicationContext(), NoteDetailActivity.class);
                 intent.putExtra(Constants.LIST_TYPE_NOTES, Constants.TRUE);
                 intent.putExtra(Constants.NOTE_OR_REMINDER, mToolbarTitle);
                 startActivity(intent);
@@ -66,7 +66,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         createPhotoNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BaseActivity.this, NoteDetailActivity.class);
+                Intent intent = new Intent(getApplicationContext(), NoteDetailActivity.class);
                 intent.putExtra(Constants.CAMERA, Constants.TRUE);
                 intent.putExtra(Constants.NOTE_OR_REMINDER, mToolbarTitle);
                 startActivity(intent);
