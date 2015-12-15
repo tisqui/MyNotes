@@ -7,6 +7,7 @@ import android.provider.BaseColumns;
 
 /**
  * Created by squirrel on 12/14/15.
+ * Creating DB, Tables and update the Tables
  */
 public class AppDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "mynotes.db";
@@ -52,10 +53,21 @@ public class AppDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        int version = oldVersion;
+        if(version == 1) {
+            version = 2;
+        }
+
+        if(version != DATABASE_VERSION) {
+            db.execSQL("DROP TABLE IF EXISTS " + Tables.Notes);
+            db.execSQL("DROP TABLE IF EXISTS " + Tables.Archives);
+            db.execSQL("DROP TABLE IF EXISTS " + Tables.Deleted);
+            onCreate(db);
+        }
 
     }
 
-    public void deleteDatabase(Context context){
+    public static void deleteDatabase(Context context){
         context.deleteDatabase(DATABASE_NAME);
     }
 
