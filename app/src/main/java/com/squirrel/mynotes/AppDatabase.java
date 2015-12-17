@@ -16,7 +16,7 @@ public class AppDatabase extends SQLiteOpenHelper {
     interface Tables {
         String Notes = "notes";
         String Archives = "archives";
-        String Deleted = "deleted";
+        String Trash = "trash";
     }
 
     public AppDatabase(Context context) {
@@ -44,11 +44,11 @@ public class AppDatabase extends SQLiteOpenHelper {
                 + ArchivesContract.ArchivesColumns.ARCHIVES_TYPE + " TEXT NOT NULL,"
                 + ArchivesContract.ArchivesColumns.ARCHIVES_DATE_TIME+ " TEXT NOT NULL)");
         //create Deleted table
-        db.execSQL("CREATE TABLE " + Tables.Deleted + " ("
+        db.execSQL("CREATE TABLE " + Tables.Trash + " ("
                 + BaseColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + TrashContract.DeletedColumns.DELETED_TITLE + " TEXT NOT NULL,"
-                + TrashContract.DeletedColumns.DELETED_DESCRIPTION + " TEXT NOT NULL,"
-                + TrashContract.DeletedColumns.DELETED_DATE_TIME+ " TEXT NOT NULL)");
+                + TrashContract.TrashColumns.TRASH_TITLE + " TEXT NOT NULL,"
+                + TrashContract.TrashColumns.TRASH_DESCRIPTION + " TEXT NOT NULL,"
+                + TrashContract.TrashColumns.TRASH_DATE_TIME+ " TEXT NOT NULL)");
     }
 
     @Override
@@ -61,7 +61,7 @@ public class AppDatabase extends SQLiteOpenHelper {
         if(version != DATABASE_VERSION) {
             db.execSQL("DROP TABLE IF EXISTS " + Tables.Notes);
             db.execSQL("DROP TABLE IF EXISTS " + Tables.Archives);
-            db.execSQL("DROP TABLE IF EXISTS " + Tables.Deleted);
+            db.execSQL("DROP TABLE IF EXISTS " + Tables.Trash);
             onCreate(db);
         }
 
@@ -73,6 +73,6 @@ public class AppDatabase extends SQLiteOpenHelper {
 
     public void emptyTrash(){
         //delete the Deleted table
-        getWritableDatabase().delete(Tables.Deleted, null,null);
+        getWritableDatabase().delete(Tables.Trash, null,null);
     }
 }

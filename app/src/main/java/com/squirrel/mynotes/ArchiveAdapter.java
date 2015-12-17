@@ -38,10 +38,10 @@ public class ArchiveAdapter extends RecyclerView.Adapter<ArchiveAdapter.NoteHold
         holder.mId.setText(mNotesList.get(position).getId() + "");
         holder.mTitle.setText(mNotesList.get(position).getTitle());
         //checking if the notes are Standart or the List type
-        if(mNotesList.get(position) .getDateTime().contains(Constants.No_TIME)){
+        if(mNotesList.get(position) .getDateTime().contains(Constants.TIME_NOT_SET)){
             //the type of the note is "List", need to show the list of items
             NoteCustomList noteCustomList = new NoteCustomList(mContext);
-            noteCustomList.setUpForHomeAdapter(mData.get(position).getDescription());
+            noteCustomList.setUpForHomeAdapter(mNotesList.get(position).getDescription());
             holder.mLinearLayout.removeAllViews();
             holder.mLinearLayout.addView(noteCustomList);
             holder.mDescription.setVisibility(View.GONE);
