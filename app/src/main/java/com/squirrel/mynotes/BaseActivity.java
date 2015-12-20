@@ -176,7 +176,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                         break;
                     case 4:
                         //settings
-                        mNextActivity = AppAuthenticationActivity.class;
+                        mNextActivity = AppAuthentificationActivity.class;
                         mActionType = SETTINGS;
                         break;
                     case 5:
