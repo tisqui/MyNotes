@@ -21,11 +21,12 @@ public class ArchiveAdapter extends RecyclerView.Adapter<ArchiveAdapter.NoteHold
     private List<ArchivedNote> mNotesList = Collections.emptyList();
     private Context mContext;
 
-    public ArchiveAdapter(List<ArchivedNote> notesList, Context context) {
-        mNotesList = notesList;
-        mContext = context;
+    public ArchiveAdapter(Context context, List<ArchivedNote> mData) {
         mInflater = LayoutInflater.from(context);
+        this.mNotesList = mData;
+        this.mContext = context;
     }
+
 
     @Override
     public NoteHolder onCreateViewHolder(ViewGroup parent, int viewType) {

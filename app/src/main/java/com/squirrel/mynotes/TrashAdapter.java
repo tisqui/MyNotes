@@ -19,7 +19,7 @@ public class TrashAdapter extends RecyclerView.Adapter<TrashAdapter.NoteHolder> 
     private LayoutInflater mInflater;
     private List<DeletedNote> mNotesList = Collections.emptyList();
 
-    public TrashAdapter(List<DeletedNote> notesList, Context context) {
+    public TrashAdapter(Context context, List<DeletedNote> notesList) {
         mNotesList = notesList;
         mInflater = LayoutInflater.from(context);
     }

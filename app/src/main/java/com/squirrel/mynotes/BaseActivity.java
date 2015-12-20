@@ -30,7 +30,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public static String mToolbarTitle = Constants.NOTES;
     public static int mActionType = NOTES;
 
-    private Toolbar mToolbar;
+    protected Toolbar mToolbar;
 
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
