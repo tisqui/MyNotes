@@ -16,12 +16,12 @@ public class AppAuthentificationActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authentification_layout);
-        activateToolbarWithHomeEnabled();
+        getToolbarWithDisplayUpAsHomeEnabled();
         ImageView dropboxImageView = (ImageView) findViewById(R.id.drop_box_set);
         dropboxImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AppAuthentificationActivity.this, DBPickerActivity.classs));
+                startActivity(new Intent(AppAuthentificationActivity.this, DBPickerActivity.class));
                 finish();
             }
         });

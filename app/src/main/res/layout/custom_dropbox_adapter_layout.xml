@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:textSize="@dimen/home_title"
+              android:textColor="@color/notesSecondaryTextColor">
+
+    <ImageView
+        android:id="@+id/folder_image"
+        android:src="@drawable/ic_dropbox_grey600_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/drop_box_directory_name"
+        android:layout_toRightOf="@id/folder_image"
+        android:layout_toEndOf="@id/folder_image"
+        android:textSize="@dimen/list_text_size"
+        android:textColor="@color/notesSecondaryTextColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/notesDropBoxSeparator"
+        android:layout_below="@id/drop_box_directory_name"/>
+
+</RelativeLayout>
