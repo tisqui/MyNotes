@@ -146,11 +146,12 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         //initialize the drawer fragment
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);
-        mNavigationDrawerFragment.setUpDrawer(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
+        DrawerLayout dl = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mNavigationDrawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
 
-        NavigationDrawerAdapter navigationDrawerAdapter = new NavigationDrawerAdapter(menuItemsList, getApplicationContext());
+        NavigationDrawerAdapter navigationDrawerAdapter = new NavigationDrawerAdapter( menuItemsList, getApplicationContext());
         //initialize the list view for navigation drawer
-        navigationListView = (ListView) findViewById(R.id.navigation_drawer_list);
+        navigationListView = (ListView) findViewById(R.id.navigation_list);
         navigationListView.setAdapter(navigationDrawerAdapter);
 
         navigationListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -50,7 +50,7 @@ public class NavigationDrawerAdapter extends BaseAdapter {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        convertView = mLayoutInflater.inflate(R.layout.navigation_drawer_list, null);
+        convertView = mLayoutInflater.inflate(R.layout.navigation_drawer_item, null);
         NavigationDrawerItem navigationDrawerItem = mListOfItems.get(position);
 
         TextView textView = (TextView) convertView.findViewById(R.id.navigation_drawer_item_text);
