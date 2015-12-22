@@ -8,4 +8,7 @@
     <string name="google_drive">Google Drive</string>
     <string name="default_text">Currently selected default</string>
     <string name="dropbox">Dropbox</string>
+    <string name="logout_text">Log out</string>
+    <string name="folder_name_text">Folder name</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

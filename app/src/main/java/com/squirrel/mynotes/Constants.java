@@ -77,8 +77,8 @@ public class Constants {
     public static final String GOOGLE_DRIVE_UPLOAD_DIR = "google_drive_upload_dir";
 
     //drop box
-    public static final String APP_KEY = "";//TODO change this with drop box key
-    public static final String APP_SECRET = "";//TODO change this with drop box secret key
+    public static final String APP_KEY = "edxtitjovipywri";//TODO change this with drop box key
+    public static final String APP_SECRET = "te05449mkdj8gis";//TODO change this with drop box secret key
     public static final String ACCOUNT_PREFS_NAME = "prefs";
     public static final String ACCESS_KEY_NAME = "ACCESS_KEY";
     public static final String ACCESS_SECRET_NAME = "ACCESS_SECRET";

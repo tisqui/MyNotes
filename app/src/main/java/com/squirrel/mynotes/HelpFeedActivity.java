@@ -5,7 +5,7 @@ import android.os.Bundle;
 /**
  * Created by squirrel on 12/19/15.
  */
-public class HepFeedbackActivitty extends BaseActivity {
+public class HelpFeedActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

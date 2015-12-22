@@ -22,7 +22,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
@@ -53,7 +52,7 @@ public class NotesActivity extends BaseActivity implements
     private ContentResolver mContentResolver;
     private NotesAdapter mNotesAdapter;
     private static Boolean mIsInAuthentification;
-    private static Bitmap mSendImage = null;
+    protected static Bitmap mSendImage = null;
     private boolean mImageIsNotFound = false;
     private DropboxAPI<AndroidAuthSession> mDropboxAPI;
 
@@ -62,7 +61,7 @@ public class NotesActivity extends BaseActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notes);
+        setContentView(R.layout.activity_main_layout);
         getToolbar();
         setUpForDropbox();
         setUpNavigationDrawer();
@@ -97,10 +96,10 @@ public class NotesActivity extends BaseActivity implements
             public void onItemLongClick(View view, int position) {
                 PopupMenu popupMenu = new PopupMenu(NotesActivity.this, view);
                 MenuInflater inflater = popupMenu.getMenuInflater();
-                inflater.inflate(R.menu_action_notes, popupMenu.getMenu());
+                inflater.inflate(R.menu.action_notes, popupMenu.getMenu());
                 popupMenu.show();
-                View v = view;
-                int pos = position;
+                final View v = view;
+                final int pos = position;
 
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
@@ -157,7 +156,7 @@ public class NotesActivity extends BaseActivity implements
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        mNotesAdapter.notifyImageObtained();
+                                        mNotesAdapter.notifyImageReceived();
                                     }
                                 });
                             } else {
@@ -194,7 +193,7 @@ public class NotesActivity extends BaseActivity implements
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
-                                        mNotesAdapter.notifyImageObtained();
+                                        mNotesAdapter.notifyImageReceived();
                                     }
                                 });
                             }
@@ -401,12 +400,13 @@ public class NotesActivity extends BaseActivity implements
         String listDescription = "";
         if(isList == View.VISIBLE) {
             NoteCustomList noteCustomList = (NoteCustomList) linearLayout.getChildAt(0);
-            for(int i=0; i<noteCustomList.getChildCount(); i++) {
-                LinearLayout first = (LinearLayout) noteCustomList.getChildAt(i);
-                CheckBox bx = (CheckBox) first.getChildAt(0);
-                TextView cx = (TextView) first.getChildAt(1);
-                listDescription = description + cx.getText().toString() + bx.isChecked() + "%";
-            }
+            listDescription = noteCustomList.getLists();
+//            for(int i=0; i<noteCustomList.getChildCount(); i++) {
+//                LinearLayout first = (LinearLayout) noteCustomList.getChildAt(i);
+//                CheckBox bx = (CheckBox) first.getChildAt(0);
+//                TextView cx = (TextView) first.getChildAt(1);
+//                listDescription = description + cx.getText().toString() + bx.isChecked() + "%";
+//            }
             values.put(ArchivesContract.ArchivesColumns.ARCHIVES_TYPE, Constants.LIST);
         } else {
             listDescription = description.getText().toString();

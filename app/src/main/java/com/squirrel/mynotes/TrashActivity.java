@@ -13,7 +13,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +30,7 @@ public class TrashActivity  extends BaseActivity implements
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_all_layout);
+        setContentView(R.layout.activity_main_layout);
         mToolbar = getToolbar();
         setUpNavigationDrawer();
         setUpRecyclerView();
@@ -128,8 +127,8 @@ public class TrashActivity  extends BaseActivity implements
         return super.onOptionsItemSelected(item);
     }
 
-    private void showToast(String msg) {
-        Toast error = Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG);
-        error.show();
-    }
+//    private void showToast(String msg) {
+//        Toast error = Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG);
+//        error.show();
+//    }
 }

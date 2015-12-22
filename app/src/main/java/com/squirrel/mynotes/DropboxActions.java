@@ -21,11 +21,11 @@ public class DropboxActions {
         SharedPreferences prefs = context.getSharedPreferences(Constants.ACCOUNT_PREFS_NAME,0);
         String key = prefs.getString(Constants.ACCESS_KEY_NAME, null);
         String secret = prefs.getString(Constants.ACCESS_SECRET_NAME, null);
-        if(key == null | secret == null | key.length() == 0 || secret.length() == 0) {
+        if(key == null || secret == null || key.length() == 0 || secret.length() == 0) {
             return;
         }
         //new or old of dropbox auth
-        if(key.equals("oath2:")) {
+        if(key.equals("oauth2:")) {
             //newer version
             session.setOAuth2AccessToken(secret);
         } else {

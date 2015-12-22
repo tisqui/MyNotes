@@ -23,14 +23,14 @@ public class DropboxDirectoryCreatorAsync extends AsyncTask<Void, Long, Boolean>
         void onDirectoryCreatedFinished(String directoryName);
     }
 
-    public DropboxDirectoryCreatorAsync(DropboxAPI<?> dropboxAPI, String path,
-                                        Context context, OnDirectoryCreatedFinished listener,
-                                        String name) {
+    public DropboxDirectoryCreatorAsync(Context context, DropboxAPI<?> dropboxAPI, String directoryName,
+                                        String path,
+                                        OnDirectoryCreatedFinished listener) {
         mDropboxAPI = dropboxAPI;
         mPath = path;
+        mName = directoryName;
         mContext = context;
         mListener = listener;
-        mName = name;
     }
 
     @Override

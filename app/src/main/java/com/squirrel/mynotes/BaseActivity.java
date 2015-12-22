@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,9 +41,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
 
     protected void setUpActionButtons(){
-        createNote = (ImageView) findViewById(R.id.create_note);
-        createListNote = (ImageView) findViewById(R.id.create_list_note);
-        createPhotoNote = (ImageView) findViewById(R.id.create_photo_note);
+        createNote = (ImageView) findViewById(R.id.new_note);
+        createListNote = (ImageView) findViewById(R.id.new_list_note);
+        createPhotoNote = (ImageView) findViewById(R.id.new_image_note);
 
         createNote.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,12 +76,12 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
 
-    public void performAsReminder(){
+    public static void performAsReminder(){
         mToolbarTitle = Constants.REMINDERS;
         mActionType = REMINDERS;
     }
 
-    public void performAsNotes(){
+    public static void performAsNotes(){
         mToolbarTitle = Constants.NOTES;
         mActionType = NOTES;
     }
@@ -88,7 +89,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected Toolbar getToolbar(){
         if(mToolbar == null){
-            mToolbar = (Toolbar) findViewById(R.id.application_toolbar);
+            mToolbar = (Toolbar) findViewById(R.id.toolbar);
             if(mToolbar != null){
                 switch (mActionType){
                     case REMINDERS:
@@ -195,6 +196,10 @@ public abstract class BaseActivity extends AppCompatActivity {
                 mNavigationDrawerFragment.closeDrawer();
             }
         });
+    }
+
+    protected void showToast(String message) {
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
     }
 
 }

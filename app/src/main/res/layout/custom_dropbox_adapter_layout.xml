@@ -18,6 +18,7 @@
         android:layout_toRightOf="@id/folder_image"
         android:layout_toEndOf="@id/folder_image"
         android:textSize="@dimen/list_text_size"
+        android:layout_centerVertical="true"
         android:textColor="@color/notesSecondaryTextColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -26,6 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/notesDropBoxSeparator"
-        android:layout_below="@id/drop_box_directory_name"/>
+        android:layout_below="@id/folder_image"/>
 
 </RelativeLayout>
