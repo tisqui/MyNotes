@@ -89,8 +89,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected Toolbar getToolbar(){
         if(mToolbar == null){
-            mToolbar = (Toolbar) findViewById(R.id.toolbar);
+            mToolbar = (Toolbar) findViewById(R.id.app_bar);
             if(mToolbar != null){
+                setSupportActionBar(mToolbar);
                 switch (mActionType){
                     case REMINDERS:
                         getSupportActionBar().setTitle(Constants.REMINDERS);
@@ -137,12 +138,12 @@ public abstract class BaseActivity extends AppCompatActivity {
         ListView navigationListView;
         List<NavigationDrawerItem> menuItemsList = new ArrayList<>();
 
-        menuItemsList.add(new NavigationDrawerItem(android.R.drawable.ic_menu_agenda, Constants.DRAWER_NOTES));
-        menuItemsList.add(new NavigationDrawerItem(android.R.drawable.ic_popup_reminder, Constants.DRAWER_REMINDERS));
-        menuItemsList.add(new NavigationDrawerItem(android.R.drawable.ic_menu_gallery, Constants.DRAWER_ARCHIVES));
-        menuItemsList.add(new NavigationDrawerItem(android.R.drawable.ic_menu_delete, Constants.DRAWER_TRASH));
-        menuItemsList.add(new NavigationDrawerItem(android.R.drawable.ic_menu_preferences, Constants.DRAWER_SETTINGS));
-        menuItemsList.add(new NavigationDrawerItem(android.R.drawable.ic_menu_help, Constants.DRAWER_HELP_AND_FEEDBACK));
+        menuItemsList.add(new NavigationDrawerItem(R.drawable.ic_paperclip, Constants.DRAWER_NOTES));
+        menuItemsList.add(new NavigationDrawerItem(R.drawable.ic_alarm, Constants.DRAWER_REMINDERS));
+        menuItemsList.add(new NavigationDrawerItem(R.drawable.ic_timer_sand, Constants.DRAWER_ARCHIVES));
+        menuItemsList.add(new NavigationDrawerItem(R.drawable.ic_emoticon_poop, Constants.DRAWER_TRASH));
+        menuItemsList.add(new NavigationDrawerItem(R.drawable.ic_settings, Constants.DRAWER_SETTINGS));
+        menuItemsList.add(new NavigationDrawerItem(R.drawable.ic_duck_grey600_24dp, Constants.DRAWER_HELP_AND_FEEDBACK));
 
         //initialize the drawer fragment
         mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragment_navigation_drawer);

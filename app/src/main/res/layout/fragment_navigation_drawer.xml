@@ -2,7 +2,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="@color/notesPrimaryBackgroundColor"
+             android:background="@color/drawerBackground"
              android:layout_marginRight="56dp"
              android:layout_marginEnd="56dp"
              tools:context="com.squirrel.mynotes.NavigationDrawerFragment">

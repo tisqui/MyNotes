@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="notesPrimaryBackgroundColor">#e91e63</color>
-    <color name="notesSecondaryBackgroundColor">#d81b60</color>
-    <color name="notesColorBackgroundAccent">#e040fb</color>
+    <color name="notesPrimaryBackgroundColor">#03a9f4</color>
+    <color name="notesSecondaryBackgroundColor">#039be5</color>
+    <color name="notesColorBackgroundAccent">#1de9b6</color>
     <color name="notesBackgroundColor">#FFFFFF</color>
     <color name="notesPrimaryTextColor">#FFFFFF</color>
+    <color name="drawerBackground">#fafafa</color>
+    <color name="drawerItemsText">#212121</color>
     <color name="notesBody">#FFFFFF</color>
     <color name="notesCardBody">#f5f5f5</color>
     <color name="notesSecondaryTextColor">#656565</color>
-    <color name="notesDropBoxSeparator">#f5f5f5</color>
+    <color name="notesDropBoxSeparator">#fafafa</color>
     <color name="notesSelectionTickColor">#f5f5f5</color>
     <color name="notesImageBackground">#f5f5f5</color>
 </resources>

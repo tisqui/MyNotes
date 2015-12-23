@@ -19,7 +19,7 @@ public class Constants {
     public static final String TIME_NOT_SET = "TIME_NOT_SET";
     public static final String ARCHIVE_EMPTY = "ARCHIVE_EMPTY";
     public static final String TRASH_EMPTY = "TRASH_EMPTY";
-    public static final String EMPTY = "EMPTY";
+    public static final String EMPTY = "No notes added";
     public static final String NOTE_PREFIX = "note_";
     public static final String NOTE_OR_REMINDER = "NoteOrReminder";
 

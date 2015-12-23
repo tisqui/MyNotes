@@ -424,6 +424,8 @@ public class NoteDetailActivity extends BaseActivity
         int id = insertNote(values);
         mId = id + "";
         createNoteAlarm(values, id);
+        //TODO check if need to create alarm here
+//        saveNote();
     }
 
     @Override
