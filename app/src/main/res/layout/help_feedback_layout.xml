@@ -23,7 +23,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:text=""
+                android:text="add text here"
                 android:layout_width="match_parent"
                 android:textSize="@dimen/home_title"
                 android:layout_gravity="center"

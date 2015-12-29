@@ -35,13 +35,25 @@
             android:textColor="@color/notesPrimaryTextColor"
             android:textSize="@dimen/small_menu_label"/>
 
+        <!--<ImageView-->
+        <!--android:id="@+id/log_out_drop_box_label"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_marginEnd="@dimen/card_view_margin"-->
+        <!--android:layout_marginRight="@dimen/card_view_margin"-->
+        <!--android:src="@drawable/ic_database_white_36dp"/>-->
+
         <TextView
             android:id="@+id/log_out_drop_box_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
             android:text="@string/logout_text"
             android:textColor="@color/notesPrimaryTextColor"
             android:textSize="@dimen/toolbar_text_size"/>
@@ -55,7 +67,7 @@
             android:layout_marginRight="@dimen/card_view_margin"
             android:layout_toLeftOf="@id/log_out_drop_box_label"
             android:layout_toStartOf="@id/log_out_drop_box_label"
-            android:src="@android:drawable/ic_menu_save"/>
+            android:src="@drawable/ic_database_white_36dp"/>
 
         <ImageView
             android:id="@+id/new_directory"

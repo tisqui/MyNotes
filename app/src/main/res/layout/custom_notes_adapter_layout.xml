@@ -22,13 +22,12 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_gravity="top"
-            android:background="@color/notesCardBody"
+            android:background="@color/backgroundBasic"
             android:orientation="vertical"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:background="@color/notesImageBackground"
-                android:src="@drawable/ic_refresh_white_48dp"
+                android:src="@drawable/ic_duck_grey600_48dp"
                 android:id="@+id/image_note_custom_home"
                 android:layout_width="150dp"
                 android:layout_alignParentLeft="true"

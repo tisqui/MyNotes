@@ -4,18 +4,18 @@
     <item
         android:id="@+id/action_delete"
         android:orderInCategory="100"
-        android:icon="@android:drawable/ic_menu_delete"
+        android:icon="@drawable/ic_delete"
         app:showAsAction="always"
         android:title="Delete" />
     <item
         android:id="@+id/action_archive"
-        android:icon="@android:drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_folder_image"
         android:title="Archive"
         android:orderInCategory="50"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_edit"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@drawable/ic_pencil"
         android:title="Edit"
         android:orderInCategory="10"
         app:showAsAction="always" />

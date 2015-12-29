@@ -6,6 +6,6 @@
         android:id="@+id/action_empty_trash"
         android:title="Empty"
         android:orderInCategory="100"
-        android:icon="@android:drawable/ic_menu_delete"
+        android:icon="@drawable/ic_delete"
         app:showAsAction="ifRoom|withText" />
 </menu>

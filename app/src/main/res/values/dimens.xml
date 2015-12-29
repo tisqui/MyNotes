@@ -7,9 +7,11 @@
     <dimen name="home_description">15sp</dimen>
     <dimen name="help_feedback_margin">10dp</dimen>
     <dimen name="card_view_margin">10dp</dimen>
-    <dimen name="small_menu_label">12sp</dimen>
+    <dimen name="small_menu_label">14sp</dimen>
     <dimen name="menu_padding">10dp</dimen>
     <dimen name="list_text_size">15sp</dimen>
     <dimen name="secondary_text">20sp</dimen>
     <dimen name="toolbar_text_size">18sp</dimen>
+    <dimen name="choose_storage_elements_top_padding">24dp</dimen>
+    <dimen name="choose_storage_elements_side_padding">16dp</dimen>
 </resources>

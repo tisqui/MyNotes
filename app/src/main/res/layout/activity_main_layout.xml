@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/notesBackgroundColor"
+    android:background="@color/backgroundBasic"
     android:orientation="vertical">
 
     <include
@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:elevation="15dp">
+                android:elevation="5dp">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -82,7 +82,7 @@
                 android:id="@+id/recycler_view_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_view_margin"/>
+                android:layout_marginTop="16dp"/>
 
 
         </LinearLayout>
